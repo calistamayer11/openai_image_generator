@@ -1,6 +1,15 @@
-async function fetchImage(size = "512x512") {
+function showSpinner() {
+  document.querySelector(".loading").classList.add("show");
+}
+
+function removeSpinner() {
+  document.querySelector(".loading").classList.remove("show");
+}
+
+async function fetchImage() {
+  showSpinner();
   const prompt = document.querySelector("input").value;
-  console.log(prompt);
+  const size = document.querySelector("#size").value;
   const data = {
     prompt: prompt,
     size: size,
@@ -15,12 +24,18 @@ async function fetchImage(size = "512x512") {
   };
   const response = await fetch("/generate", headers);
   const data2 = await response.json();
-  console.log(data2);
+  const error = data2.error;
   const url = data2.url;
+  if (response.ok) {
+    removeSpinner();
+  }
+  if (error) {
+    document.querySelector(".error").innerText = error;
+  }
   const image = document.querySelector("#image");
   image.src = url;
-  console.log("image", image);
   document.querySelector("input").value = "";
+  document.querySelector("p").innerText = prompt;
 }
 let button = document.querySelector(".btn");
 button.addEventListener("click", fetchImage);
