@@ -1,26 +1,70 @@
 :root {
-    --primary-color: #6cb4ee;
-  }
-  
-  *,
-  *:before,
-  *:after {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-  }
-  /* nav */
+  --primary-color: #6cb4ee;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+/* nav */
 nav {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 1rem;
-    color: #fff;
-    background: #333;
-  }
-  
-  nav a {
-    color: #fff;
-    font-size: 1.2rem;
-    text-decoration: none;
-  }
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+  color: #fff;
+  background: #333;
+}
+
+nav a {
+  color: #fff;
+  font-size: 1.2rem;
+  text-decoration: none;
+}
+
+/* main */
+
+main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 100%;
+}
+
+input,
+select,
+button {
+  margin: 0.5rem;
+}
+
+button {
+  font-size: 20px;
+  color: white;
+  background-color: #333;
+  padding: 1rem;
+  border-radius: 5px;
+  border: none;
+  cursor: pointer;
+}
+
+button:hover {
+  transform: scale(1.1);
+}
+
+input {
+  font-size: 20px;
+  border-radius: 5px;
+  width: 500px;
+}
+
+select {
+  font-size: 20px;
+}
+
+.error {
+  color: red;
+}
