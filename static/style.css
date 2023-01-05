@@ -108,14 +108,20 @@ select {
     margin: 0.5rem;
     border-radius: 5px;
   }
+
   nav {
     flex-direction: column;
     justify-content: center;
     align-items: center;
     padding: 0.5rem;
   }
+
   #image {
     max-width: 100%;
     height: auto;
+  }
+
+  .card {
+    width: 95vw;
   }
 }
