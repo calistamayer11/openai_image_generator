@@ -68,3 +68,53 @@ select {
 .error {
   color: red;
 }
+.card {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  transition: 0.3s;
+  border-radius: 5px;
+}
+.card:hover {
+  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+}
+.card.show-p p {
+  font-size: 1.3rem;
+  padding: 0.5rem;
+  margin: 0.5rem;
+}
+
+#image {
+  max-width: 100%;
+  height: auto;
+  border-radius: 5px 5px 0 0;
+}
+
+@media only screen and (max-width: 500px) {
+  .inputdiv {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+  input {
+    width: 95vw;
+    font-size: 1rem;
+    min-width: 200px;
+    padding: 0.5rem;
+    margin: 0.5rem;
+    border-radius: 5px;
+  }
+  nav {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 0.5rem;
+  }
+  #image {
+    max-width: 100%;
+    height: auto;
+  }
+}

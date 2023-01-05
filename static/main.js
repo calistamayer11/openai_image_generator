@@ -34,6 +34,7 @@ async function fetchImage() {
   }
   const image = document.querySelector("#image");
   image.src = url;
+  document.querySelector(".card").classList.add("show-p");
   document.querySelector("input").value = "";
   document.querySelector("p").innerText = prompt;
 }
