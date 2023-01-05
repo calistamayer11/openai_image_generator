@@ -24,7 +24,6 @@ def generate():
     size = data.get("size")
     try:
         response = openai.Image.create(prompt=prompt, n=1, size=size)
-        print("response", response)
         image_url = response["data"][0]["url"]
     except openai.error.OpenAIError as e:
         return {"error": e}
